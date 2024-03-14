@@ -1,14 +1,95 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Calculator BMI</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <script src="js/script.js"></script>
+    <nav>Calculator BMI</nav>
+    <main>
+      <div class="main-container">
+        <!-- Form Display -->
+        <div class="container-item">
+          <h2>BMI Calculator</h2>
+          <section>
+            <p id="text">Kalkulator BMI memberikan gambar mengenai berat badan ideal Anda. Cek berat badan ideal Anda, sekarang!</p>
+          </section>
+          <section class="container-form">
+            <div>
+              <label for="">Jenis Kelamin</label><br />
+              <input type="radio" name="sex" id="sex-man" />
+              <label for="sex-man">Laki-laki</label>
+              <input type="radio" name="sex" id="sex-woman" />
+              <label for="sex-woman">Perempuan</label>
+            </div>
+            <div>
+              <label>Berat Badan (kg)</label><br />
+              <input type="number" class="form-item" id="weight-input" placeholder=" Berat badan Anda (Kg)" />
+            </div>
+            <div>
+              <label>Usia (tahun)</label><br />
+              <input type="number" class="form-item" id="age-input" placeholder=" Usia Anda (tahun)" />
+            </div>
+            <div>
+              <label>Tinggi (cm)</label><br />
+              <input type="number" class="form-item" id="height-input" placeholder=" Tinggi badan Anda (cm)" />
+            </div>
+            <div>
+              <button type="button" id="calculate-button" onclick="calculate()">Hitung BMI</button>
+              <button type="reset" id="reset-button" onclick="reset()">Reset</button>
+            </div>
+          </section>
+
+          <section>
+            <p id="text-1">Manfaat Perhitungan BMI</p>
+            <ol>
+              <svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
+                <rect width="18.2149" height="20" rx="4" fill="#00264d"></rect>
+                <rect opacity="0.3" x="4.55371" y="4" width="18.2149" height="20" rx="4" fill="white"></rect>
+              </svg>
+              Menghitung Berat Badan yang Ideal bagi tubuh Anda
+
+              <br />
+              <svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
+                <rect width="18.2149" height="20" rx="4" fill="#00264d"></rect>
+                <rect opacity="0.3" x="4.55371" y="4" width="18.2149" height="20" rx="4" fill="white"></rect>
+              </svg>
+              Menjaga kesehatan badan <br/>
+            
+              <svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
+                <rect width="18.2149" height="20" rx="4" fill="#00264d"></rect>
+                <rect opacity="0.3" x="4.55371" y="4" width="18.2149" height="20" rx="4" fill="white"></rect>
+              </svg>
+              Mengurangi resiko terkena obesitas
+    
+            </ol>
+            </p>
+            <p id="text-3">
+              *Wanita hamil atau menyusui dilarang mengandalkan hasil perhitungan ini
+            </p>
+          </section>
+        </div>
+        <!-- Display hasil form -->
+        <div class="container-item">
+          <h2>Result</h2>
+          <section class="container-result">
+            <h4 id="heading">Berat Badan Anda</h4>
+            <h1 id="result-bmi">0</h1>
+            <h4 id="message"></h4>
+            <button type="button" class="hasil-bmi">Download Hasil BMI</button>
+          </section>
+          <p id="text-1">Hasil BMI</p>
+          <h4 id="message2"></h4>
+          <section class="keterangan">
+            <p id="message3"></p>
+            <p id="message4"></p>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer>Copyright Samuel Sanggawino</footer>
+    <br>
+    <script src="./js/script.js"></script>
   </body>
-  <p>Hello World</p>
-  <h1>Test ini H1</h1>
-  <h2>test ini aku mau coba push ke github</h2>
-  <h3>apalagi ya??</h3>
 </html>
